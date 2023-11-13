@@ -1,0 +1,585 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+/* Nav_bar */
+header{
+    width: 100%;
+    padding: 20px 100px ;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 999;
+    position: fixed;
+}
+.nav h3{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.nab_bar_btn{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation{
+    margin-right: 150px;
+}
+
+.nab_bar_btn:hover{
+    background: #ebe4e4;
+    color: rgb(10, 10, 10);
+}
+
+
+.navigation  a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: cursive;
+    margin-left: 40px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+
+.navigation  a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .5s ;
+}
+
+/* Section 1 (Home) */
+
+/* Form */
+/* #home .wrapper{
+    margin-left: 35%;
+    margin-top: 15%;
+    position: absolute;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    z-index: 99;
+    border: 2px solid rgb(255, 255 ,255 ,.5);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgb(0, 0, 0 , .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: height .2s ease;
+    transition: transform .5s ease ;
+} 
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 520px;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .form-box{
+width: 100%;
+padding: 30px;
+}
+
+.form-box.login {
+    /* display: none; */
+    /* transform: translateX(0);
+} */
+
+.wrapper.active .form-box.login{
+transition: none;
+transform: translateX(-400px);
+}
+
+.form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translate(400px);
+}
+
+
+.wrapper.active .form-box.register{
+    transition: none;
+    transform: translateX(0px);
+    }
+
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+    font-family: cursive;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    transition: 0.5s;
+    font-family: cursive;
+}
+
+.input-box input:focus~label ,
+.input-box input:valid~label
+{
+    top: -5px;  
+}
+
+.input-box input{
+    width:100% ;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    /* padding: 0px 35px 0px 5px; */
+}
+
+.input-box .icon{
+    position: absolute;
+    right:8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-family: cursive;
+}
+
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    cursor: pointer;
+    font-size:1em;
+    color: #fff;
+    font-weight: 500;
+    font-family: cursive;
+}
+
+.login-register{
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    font-family: cursive;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+} */
+/* Home */
+
+#home{
+    width: 100%;
+}
+.media img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.media  {
+    display: flex;
+    flex-direction: row;
+}
+ .home_greet{
+    margin: 20% 0 0 10%;
+    position: absolute;
+    font-size: large;
+    font-family: cursive;
+}
+.home_input{
+    font-size: larger;
+    color: rgb(239, 218, 140);   
+}
+ .home_book{
+    position: absolute;
+    border: 2px solid rgb(37, 32, 32);
+    border-radius: 15px;
+    box-shadow: 6px 6px 6px 6px rgb(139, 139, 139);
+    width: 450px;
+    margin-left: 60%;
+    margin-top: 10%;
+    text-align: center;
+    font-size: x-large;
+    font-family: cursive;
+    background-color: aliceblue;
+}
+.home_book_info h4{
+    padding: 5.5%;
+    font-size: large;
+    font-family: cursive;
+}
+.home_book_info h4 input{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 5%;
+    padding: 5px;
+}
+.home_book_info button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color:rgb(194, 243, 227);
+    font-family: cursive;
+    font-size: medium;
+    box-shadow: 5px 5px rgb(244, 210, 210); 
+}
+
+.home_book_info button a {
+    text-decoration: none;
+}
+
+/* Section 2 (About) */
+
+.abt_head{
+    text-align: center;
+    font-size: 30px;
+    font-family: cursive;
+   
+}
+#abt img{
+    width: 40%;
+    height: 40%;
+    margin: 50px 0 0 10px;
+    border-radius: 20px;
+}
+.abt_img{
+    display: flex;
+    flex-direction: row;
+}
+
+.abt_info{
+    text-align: center;
+    margin: 5%;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.abt-sec-img{
+    display: flex;
+    flex-direction: row;
+}
+
+.abt-sec-info{
+    text-align: center;
+    margin: 5%;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+#rms{
+    background-color: #869199;
+    padding: 2%;
+    margin-top: 70px;
+    margin: 2%;
+    border-radius: 10px;
+}
+
+#rms h1{
+    text-align: center;
+    font-family: cursive;
+    font-size: 40px;
+
+}
+
+#rms .card-rms{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5%;
+}
+
+#rms .card-first-rms{
+    background: white;
+    font-family: cursive;
+    border:2px #162938;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px 6px #9f9e9e;
+    margin-left: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 40px;
+}
+#rms .card-first-rms img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#rms .card-first-rms button{
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+#rms .card-sec-rms{
+    background: white;
+    border:2px #162938;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px 6px #9f9e9e;
+    margin-left: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 40px;
+    font-family: cursive;
+}
+
+#rms .card-sec-rms img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#rms .card-sec-rms button{
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+
+#rms .card-thrd-rms{
+    background: white;
+    border:2px #162938;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px 6px #9f9e9e;
+    margin-left: 100px;
+    width: 20%;
+    text-align: center;
+    padding: 40px;
+    font-family: cursive;
+}
+#rms .card-thrd-rms img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#rms .card-thrd-rms button{
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+/*  Section 4 (Contact) */
+
+.cnt-h1{
+    text-align: center;
+    color: black;
+font-size: 30px;
+font-family: cursive;
+font-weight: 500;
+}
+
+.cnt-info{
+    text-align: center;
+    background-color: #162938;
+    padding: 100px;
+    margin: 10px;
+    border-radius: 30px;
+    font-family: cursive;
+    color: #fff;
+}
+
+.foot{
+    text-align: center;
+    background-color:#162938 ;
+    padding: 10px;
+    bottom: 0;
+    color: #fff;
+    padding: 20px;
+    font-family: cursive;
+}
+/* Media Screen */
+
+@media screen and (max-width: 1519px) {
+
+    /* Section 1 (home) */
+#home img{
+        /* height: 500%; */
+        width: 100%;
+        height: 100%;
+    }
+  .home_greet{
+        font-size: small;
+        position: absolute;
+
+    }
+    .home_book{
+        position: absolute;
+        margin-left: 0;
+        width: 90%;
+        margin-left: 50px;
+        height: 18%;
+       margin-top: 50%;
+        font-size: medium;
+    }
+
+    .home_book h2{
+        margin-bottom: 4px;
+    }
+
+    .home_book_info h4{
+        display: inline-block;
+        font-size: small;
+        padding: 5px;
+        margin: 0 0 0 0;
+    }
+    .home_book_info h4 input {
+        width: 50px;
+    }
+
+    /* Section 2 (About) */
+
+    .abt_head h2{
+        margin-top: 15%;
+        margin-bottom: 5%;
+        font-size: larger;
+    }
+
+   .abt_img{ 
+    display: block;
+   }
+
+   #abt img{
+    width: 95%;
+    height: auto;
+   }
+
+   .abt-sec-img{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#rms .card-rms{
+    display: block;
+    align-items: center;
+    margin: 20px 0px 0px 185px;
+    justify-content: space-between;
+}
+
+#rms .card-sec-rms{
+    margin: 20px 0 0 0 ;
+    width: 60%;
+}
+
+#rms .card-first-rms{
+    margin: 20px 0 0 0;
+    width: 60%;
+}
+#rms .card-thrd-rms{
+    margin: 20px 0 0 0;
+    width: 60%;
+}
+
+
+}
+
+@media screen and (max-with: 892px) {
+    
+}

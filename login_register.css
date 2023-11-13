@@ -1,0 +1,54 @@
+body{
+    padding: 50px;
+}
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow:10px 10px 10px 10px rgb(100, 100, 111 , 0.2);
+}
+.form-group{
+    margin-bottom: 50px;    
+}
+.form-control{
+    margin-top: 50px;
+}
+.from-btn{
+    transition: 0.3ms;
+    text-align: center;
+    margin-top: 50px;
+    font-family: cursive;
+}
+.from-btn:hover{
+    color: rgb(177, 177, 243);
+}
+.form-signin{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 20px;
+    font-family: cursive;
+}
+.form-signin a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+.from-register{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 20px;
+    font-family: cursive;
+}
+.from-register a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+.container-img a img{
+    height: 30px;
+    width: 30px;
+    float: inline-end;
+    margin-top: -30px;
+}
