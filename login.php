@@ -21,7 +21,7 @@
             $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
             if ($user) {
                 if (password_verify($password, $user['password'])) {
-                    header("Location: http://localhost/pratice%20js/index_1.php");
+                    header("Location: index_1.php");
                     die();
                 } else {
                     echo "<div class ='alert alert-danger'>Password Doesnot match </div>";

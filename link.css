@@ -1,0 +1,23 @@
+.card-list{
+    width: 90%;
+    height: 20%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 2%;
+    justify-content: space-between;
+    box-shadow: 8px 8px 8px 8px rgb(218, 215, 215);
+    border-radius: 10px;
+}
+.card-list img{
+    width: 10%;
+    height: 8%;
+    border-radius: 10px;
+}
+.card-list button{
+    padding: 0 20px 0 20px;
+    margin: 20px 5px 20px 0;
+    border-radius: 30px;
+    background: rgb(186, 186, 245);
+}

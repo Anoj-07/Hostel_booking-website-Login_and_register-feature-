@@ -45,7 +45,7 @@
                     <h4>Number of Rooms : <input type="number"></h4>
                     <h4>Number of person : <input type="number"></h4>
                     <hr>
-                    <button><a href="">Check availability</a></button>
+                    <button><a href="List.php">Check availability</a></button>
                 </div>
             </div>
         </div>
